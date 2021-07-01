@@ -1,0 +1,128 @@
+@import '../App.scss';
+
+.card-transferencia{
+
+    display: flex;
+    flex-direction: row;
+
+    
+    background-color:#FFFFFF ;
+    border: 2px solid #8d8d8d;
+
+    width: 90% !important;
+    margin: 10px auto;
+
+    .tipo{
+        width: 10%;
+
+        width: 25px;
+        height: 25px;
+
+        margin: auto;
+
+        
+        border-radius: 20px;
+
+        .texto{
+            
+            font-size: 1em;
+            font-weight: 800;
+
+            text-align: center;
+        }
+
+
+        
+
+    }
+
+    .verde-borde{
+        border: 2px solid #77dd77;
+    }
+
+    .rojo-borde{
+        border: 2px solid #df4d49;
+    }
+
+    .verde-texto{
+        color: #77dd77 !important;
+    }
+
+    .rojo-texto{
+        color:#df4d49 !important;
+    }
+
+    
+    .contenido{
+        width: 70%;
+        
+        display: flex;
+        justify-content: center;
+        
+        .datos{
+            width: 100%;
+
+            margin-left: 10px;
+
+            .nombre{
+                color: #8d8d8d;
+
+                font-size: 1em;
+                font-weight: 600;
+
+                margin-bottom: 5px;
+            }
+
+            .monto{
+                color: #000000;
+
+                font-size: 1.1em;
+                font-weight: 800;
+
+                margin-top: 0px;
+
+            }
+            .fecha{
+                color: #c0c0c0;
+
+                font-size: 0.7em;
+                font-weight: 800;
+
+                margin-top: 0px;
+
+            }
+        }
+    }
+    .acciones{
+        width: 20%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .favorito{
+            cursor: pointer;
+
+            text-align: center;
+            font-size: 1.2em;
+            height: 50%;
+
+            &:hover{
+                background-color: #FECC5B;
+            }
+
+        }
+        .borrar{
+            cursor: pointer;
+            text-align: center;
+
+            font-size: 1.2em;
+            height: 50%;
+
+           
+        }
+
+    }
+
+    
+}

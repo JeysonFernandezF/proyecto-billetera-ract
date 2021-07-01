@@ -1,0 +1,73 @@
+
+.section{
+    width: 100%;
+    
+    
+
+    .form-section{
+        display: flex;
+        justify-content: start;
+        flex-direction: row;
+
+        .datos-billetera{
+
+            width: 50%;
+
+            margin-left: 10px;
+
+            .nombre{
+                font-size: 2em;
+                font-weight: 800;
+                
+                margin-bottom: 30px;
+                
+            }
+
+            .balance{
+                
+                border-bottom: 2px solid #FECC5B;
+                
+                font-size: 0.6em;
+                font-weight: 800;
+
+                margin-bottom: 0;
+
+            }
+            .monto{
+                
+                font-size: 1.6em;
+                font-weight: 800;
+                
+                margin-top: 0;
+                margin-bottom: 0;
+        
+            }
+
+            button{
+
+                
+                cursor: pointer;
+                
+                border: 1px solid #8d8d8d !important;
+                
+                width: 70px;
+                height: 25px;
+                margin-top: 10px;
+        
+                color: #000000;
+                font-weight: 800;
+                font-size: 0.8em;
+        
+        
+                background-color: #FECC5B;
+        
+                
+                &:hover{
+                    filter: brightness(0.95)
+                }
+            }
+        }
+
+    }
+}
+

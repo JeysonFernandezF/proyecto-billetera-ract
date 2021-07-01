@@ -1,0 +1,87 @@
+@import '../App.scss';
+
+.card-billetera{
+
+    display: flex;
+    flex-direction: row;
+
+    
+    background-color:#FFFFFF ;
+    border: 2px solid #8d8d8d;
+
+    width: 80% !important;
+    margin: 10px auto;
+
+    
+    
+    .contenido{
+        width: 80%;
+        
+        display: flex;
+        justify-content: center;
+        
+        .datos{
+            width: 100%;
+
+            margin-left: 10px;
+
+            .nombre{
+                color: #8d8d8d;
+
+                font-size: 1em;
+                font-weight: 600;
+
+                margin-bottom: 5px;
+            }
+
+            .monto{
+                color: #000000;
+
+                font-size: 1.1em;
+                font-weight: 800;
+
+                margin-top: 0px;
+
+            }
+            .fecha{
+                color: #c0c0c0;
+
+                font-size: 0.7em;
+                font-weight: 800;
+
+                margin-top: 0px;
+
+            }
+        }
+    }
+    .acciones{
+        width: 20%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .favorito{
+            cursor: pointer;
+
+            text-align: center;
+            font-size: 1.2em;
+            height: 50%;
+
+            
+
+        }
+        .borrar{
+            cursor: pointer;
+            text-align: center;
+
+            font-size: 1.2em;
+            height: 50%;
+
+            
+        }
+
+    }
+
+    
+}

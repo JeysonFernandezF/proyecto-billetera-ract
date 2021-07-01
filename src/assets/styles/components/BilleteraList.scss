@@ -1,0 +1,98 @@
+@import '../App.scss';
+.lista{
+    background-color: #F2F2F2;
+
+    .nueva-billetera{
+
+        display:flex;
+        justify-content: center;
+        align-items: center;
+
+        .mis-billeteras{
+
+            width: 80%;
+
+            
+
+
+            p{
+                padding-left: 20px;
+
+                color:#8d8d8d;
+
+                font-size: 2em;
+                font-weight: 800;
+            }
+        }
+        .agregar{
+            cursor: pointer;
+
+                width: 20%;
+                
+
+        
+                display:flex;
+                justify-content: center;
+                align-items: center;
+
+                transition: font-size 0.3s;
+                &:hover{
+                    font-size: 3em;
+                    filter: brightness(1.2)
+                }
+        
+                
+               
+                color: #8d8d8d;
+    
+                font-size: 2em;
+                font-weight: 800;
+                
+        }
+        
+
+
+    }
+
+    .lista-billeteras{
+        .seccion{
+            
+            border-bottom: 2px solid $amarillo-pastel;
+
+            display:flex;
+            justify-content: start;
+            align-items: center;
+
+
+            height: 30px;
+
+            padding-left: 20px;
+
+            color:#b3b3b3;
+            font-size: 1.2em;
+            font-weight: 600;
+            
+        }
+
+        .no-billeteras{
+            width: 80%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .billeteras-card{
+            max-height: 350px;
+            overflow: auto;
+
+            margin-bottom: 10px;
+
+            .activa{
+                background-color: #fbf0d2 !important;
+            }
+        }
+
+        
+    }
+
+
+}
