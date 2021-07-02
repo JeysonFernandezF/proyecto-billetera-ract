@@ -22,6 +22,7 @@ const initialState = {
     'monto': 0,
   },
   actualizarIndex: 0,
+  estadoPagina: false,
   
 }
 

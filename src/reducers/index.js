@@ -33,6 +33,11 @@ const reducer = (state, action) => {
                 ...state,
                 actualizarIndex: action.payload
             }
+        case 'ESTADO_PAGINA':
+            return {
+                ...state,
+                estadoPagina: action.payload
+            }
         default:
             return state;
     }

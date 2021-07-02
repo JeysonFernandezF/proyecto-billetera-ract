@@ -2,10 +2,14 @@ import axios from 'axios';
 import React, { useState } from 'react'
 import { url_base } from '../bd';
 
+import { connect, useDispatch } from "react-redux";
+import {setEstadoPagina} from '../actions/index';
+
 const useGetBilleteras = () => {
     const [billeteras, setBilleteras] = useState();
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(false);
+    
 
     async function getBilleteras(){
         try{

@@ -74,8 +74,6 @@ const BilleterasList = (props) => {
                     <h3>Error</h3>
                 ) : (
                     <div className="billeteras-card">
-
-                    
                         {billeteras.filter(billetera => billetera.favorito == 1).length > 0 ? 
                             billeteras.filter(billetera => billetera.favorito == 1).map(({id, favorito, ...otherBilleteraProps}) => 
                                 (   
@@ -93,7 +91,6 @@ const BilleterasList = (props) => {
                                     />
                                 ))
                             :
-
                             <h3 className="no-billeteras">No hay billeteras</h3>
                         }
                     </div>

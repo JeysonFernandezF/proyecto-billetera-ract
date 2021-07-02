@@ -11,6 +11,7 @@ import BilleteraForm from './BilleteraForm'
 
 import {setPageSection} from '../actions/index'
 
+import propTypes from "prop-types";
 
 
 const PageSection = (props) => {
@@ -76,7 +77,9 @@ const PageSection = (props) => {
         </div>
     )
 }
-
+PageSection.propTypes = {
+    pageSection: propTypes.string,
+};
 const mapStateToProps = (state) => {
     return {
         pageSection: state.pageSection,

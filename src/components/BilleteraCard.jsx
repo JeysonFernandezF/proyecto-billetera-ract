@@ -1,6 +1,7 @@
 import React from 'react'
 
 import "../assets/styles/components/BilleteraCard.scss";
+import propTypes from "prop-types";
 
 import StarSvg from "../assets/static/components/StarSvg";
 import TrashSvg from "../assets/static/components/TrashSvg";
@@ -10,6 +11,8 @@ import TrashSvg from "../assets/static/components/TrashSvg";
 const BilleteraCard = (props) => {
 
     
+    const { data } = props;
+
     const formatterPeso = new Intl.NumberFormat('es-CO', {
         style: 'currency',
         currency: 'COP',
@@ -47,5 +50,9 @@ const BilleteraCard = (props) => {
         </div>
     )
 }
+
+BilleteraCard.propTypes = {
+    data: propTypes.object,
+  };
 
 export default BilleteraCard

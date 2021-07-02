@@ -11,6 +11,11 @@ export const setPageSection = (payload) => ({
     type: 'SET_PAGE_SECTION',
     payload
 })
+export const setEstadoPagina = (payload) => ({
+    type: 'ESTADO_PAGINA',
+    payload
+})
+
 
 //Billetera
 export const setMontoBilletera =  (payload) => ({

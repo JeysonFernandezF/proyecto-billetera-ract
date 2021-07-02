@@ -205,14 +205,14 @@ var BilleteraCard = function BilleteraCard(props) {
         favorito: props.favorito
       });
     }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_assets_static_components_StarSvg__WEBPACK_IMPORTED_MODULE_2__.StarSvg, {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_assets_static_components_StarSvg__WEBPACK_IMPORTED_MODULE_2__.default, {
     favorito: props.favorito
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "borrar",
     onClick: function onClick() {
       return props.deleteBilletera(props.id);
     }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_assets_static_components_TrashSvg__WEBPACK_IMPORTED_MODULE_3__.TrashSvg, null))));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_assets_static_components_TrashSvg__WEBPACK_IMPORTED_MODULE_3__.default, null))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (BilleteraCard);
@@ -230,8 +230,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _assets_styles_components_BilleteraForm_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../assets/styles/components/BilleteraForm.scss */ "./src/assets/styles/components/BilleteraForm.scss");
-/* harmony import */ var _custom_hooks_useGetBilleteras__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../custom-hooks/useGetBilleteras */ "./src/custom-hooks/useGetBilleteras.js");
-/* harmony import */ var _actions_index__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../actions/index */ "./src/actions/index.js");
+/* harmony import */ var _actions_index__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../actions/index */ "./src/actions/index.js");
+/* harmony import */ var _custom_hooks_useGetBilleteras__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../custom-hooks/useGetBilleteras */ "./src/custom-hooks/useGetBilleteras.js");
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
@@ -262,7 +262,7 @@ var BilleteraForm = function BilleteraForm(props) {
   var dispatch = (0,react_redux__WEBPACK_IMPORTED_MODULE_1__.useDispatch)();
   var actualizarIndex = props.actualizarIndex;
 
-  var _useGetBilleteras = (0,_custom_hooks_useGetBilleteras__WEBPACK_IMPORTED_MODULE_3__.useGetBilleteras)(),
+  var _useGetBilleteras = (0,_custom_hooks_useGetBilleteras__WEBPACK_IMPORTED_MODULE_4__.default)(),
       postGuardarBilletera = _useGetBilleteras.postGuardarBilletera;
 
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)({
@@ -313,9 +313,9 @@ var BilleteraForm = function BilleteraForm(props) {
       billetera_id: props.billetera_id
     }, datos)).then(function () {
       if (actualizarIndex == 0) {
-        dispatch((0,_actions_index__WEBPACK_IMPORTED_MODULE_4__.setActualizarIndex)(1));
+        dispatch((0,_actions_index__WEBPACK_IMPORTED_MODULE_3__.setActualizarIndex)(1));
       } else {
-        dispatch((0,_actions_index__WEBPACK_IMPORTED_MODULE_4__.setActualizarIndex)(0));
+        dispatch((0,_actions_index__WEBPACK_IMPORTED_MODULE_3__.setActualizarIndex)(0));
       }
     });
   };
@@ -360,7 +360,7 @@ var mapStateToProps = function mapStateToProps(state) {
 };
 
 var mapDispatchToProps = {
-  setActualizarIndex: _actions_index__WEBPACK_IMPORTED_MODULE_4__.setActualizarIndex
+  setActualizarIndex: _actions_index__WEBPACK_IMPORTED_MODULE_3__.setActualizarIndex
 };
 /* harmony default export */ __webpack_exports__["default"] = ((0,react_redux__WEBPACK_IMPORTED_MODULE_1__.connect)(mapStateToProps, mapDispatchToProps)(BilleteraForm));
 
@@ -397,7 +397,7 @@ var BilleterasList = function BilleterasList(props) {
       actualizarIndex = props.actualizarIndex,
       pageSection = props.pageSection;
 
-  var _useGetBilleteras = (0,_custom_hooks_useGetBilleteras__WEBPACK_IMPORTED_MODULE_3__.useGetBilleteras)(),
+  var _useGetBilleteras = (0,_custom_hooks_useGetBilleteras__WEBPACK_IMPORTED_MODULE_3__.default)(),
       billeteras = _useGetBilleteras.billeteras,
       loading = _useGetBilleteras.loading,
       error = _useGetBilleteras.error,
@@ -456,7 +456,7 @@ var BilleterasList = function BilleterasList(props) {
         favorito = _ref.favorito,
         otherBilleteraProps = _objectWithoutProperties(_ref, ["id", "favorito"]);
 
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_BilleteraCard__WEBPACK_IMPORTED_MODULE_4__.BilleteraCard, {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_BilleteraCard__WEBPACK_IMPORTED_MODULE_4__.default, {
       key: id,
       data: otherBilleteraProps,
       id: id,
@@ -484,7 +484,7 @@ var BilleterasList = function BilleterasList(props) {
         favorito = _ref2.favorito,
         otherBilleteraProps = _objectWithoutProperties(_ref2, ["id", "favorito"]);
 
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_BilleteraCard__WEBPACK_IMPORTED_MODULE_4__.BilleteraCard, {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_BilleteraCard__WEBPACK_IMPORTED_MODULE_4__.default, {
       key: id,
       data: otherBilleteraProps,
       id: id,
@@ -514,82 +514,6 @@ var mapDispatchToProps = {
   setPageSection: _actions_index__WEBPACK_IMPORTED_MODULE_5__.setPageSection
 };
 /* harmony default export */ __webpack_exports__["default"] = ((0,react_redux__WEBPACK_IMPORTED_MODULE_1__.connect)(mapStateToProps, mapDispatchToProps)(BilleterasList));
-
-/***/ }),
-
-/***/ "./src/components/ErrorBoundary.jsx":
-/*!******************************************!*\
-  !*** ./src/components/ErrorBoundary.jsx ***!
-  \******************************************/
-/***/ (function() {
-
-function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-var ErrorBoundary = /*#__PURE__*/function (_React$Component) {
-  _inherits(ErrorBoundary, _React$Component);
-
-  var _super = _createSuper(ErrorBoundary);
-
-  function ErrorBoundary(props) {
-    var _this;
-
-    _classCallCheck(this, ErrorBoundary);
-
-    _this = _super.call(this, props);
-    _this.state = {
-      hasError: false
-    };
-    return _this;
-  }
-
-  _createClass(ErrorBoundary, [{
-    key: "componentDidCatch",
-    value: function componentDidCatch(error, errorInfo) {
-      // También puedes registrar el error en un servicio de reporte de errores
-      logErrorToMyService(error, errorInfo);
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      if (this.state.hasError) {
-        // Puedes renderizar cualquier interfaz de repuesto
-        return /*#__PURE__*/React.createElement("h1", null, "Something went wrong.");
-      }
-
-      return this.props.children;
-    }
-  }], [{
-    key: "getDerivedStateFromError",
-    value: function getDerivedStateFromError(error) {
-      // Actualiza el estado para que el siguiente renderizado muestre la interfaz de repuesto
-      return {
-        hasError: true
-      };
-    }
-  }]);
-
-  return ErrorBoundary;
-}(React.Component);
 
 /***/ }),
 
@@ -629,7 +553,7 @@ var PageSection = function PageSection(props) {
       nombre = _useSelector.nombre,
       monto = _useSelector.monto;
 
-  var _useGetTransferencias = (0,_custom_hooks_useGetTransferencias__WEBPACK_IMPORTED_MODULE_5__.useGetTransferencias)(),
+  var _useGetTransferencias = (0,_custom_hooks_useGetTransferencias__WEBPACK_IMPORTED_MODULE_5__.default)(),
       transferencias = _useGetTransferencias.transferencias,
       loading = _useGetTransferencias.loading,
       error = _useGetTransferencias.error,
@@ -653,7 +577,7 @@ var PageSection = function PageSection(props) {
 
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "section"
-  }, pageSection == 'Billetera' ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_BilleteraForm__WEBPACK_IMPORTED_MODULE_6__.BilleteraForm, {
+  }, pageSection == 'Billetera' ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_BilleteraForm__WEBPACK_IMPORTED_MODULE_6__.default, {
     billetera_id: id,
     nombre: nombre,
     monto: monto
@@ -673,12 +597,12 @@ var PageSection = function PageSection(props) {
     onClick: function onClick() {
       return dispatch((0,_actions_index__WEBPACK_IMPORTED_MODULE_7__.setPageSection)('Billetera'));
     }
-  }, " Editar")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_TransferForm__WEBPACK_IMPORTED_MODULE_3__.TransferForm, {
+  }, " Editar")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_TransferForm__WEBPACK_IMPORTED_MODULE_3__.default, {
     tiulo: "Nueva Billetera",
     postTransferencia: postTransferencia,
     monto: monto,
     billetera_id: id
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_TransferTable__WEBPACK_IMPORTED_MODULE_4__.TransferTable, {
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_TransferTable__WEBPACK_IMPORTED_MODULE_4__.default, {
     deleteTransferencia: deleteTransferencia,
     billetera_id: id,
     billetera_monto: monto,
@@ -756,7 +680,7 @@ var TransferCard = function TransferCard(props) {
     onClick: function onClick() {
       return props.deleteTransferencia(props.id, props.data.monto);
     }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_assets_static_components_TrashSvg__WEBPACK_IMPORTED_MODULE_2__.TrashSvg, null))));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_assets_static_components_TrashSvg__WEBPACK_IMPORTED_MODULE_2__.default, null))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (TransferCard);
@@ -943,7 +867,7 @@ var TransferTable = function TransferTable(props) {
 
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
       key: id
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_TransferCard__WEBPACK_IMPORTED_MODULE_3__.TransferCard, {
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_TransferCard__WEBPACK_IMPORTED_MODULE_3__.default, {
       deleteTransferencia: deleteTransferencia,
       id: id,
       data: otherTransferenciaProps
@@ -973,13 +897,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _assets_styles_components_Billeteras_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../assets/styles/components/Billeteras.scss */ "./src/assets/styles/components/Billeteras.scss");
 /* harmony import */ var _components_BilleterasList__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/BilleterasList */ "./src/components/BilleterasList.jsx");
 /* harmony import */ var _components_PageSection__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/PageSection */ "./src/components/PageSection.jsx");
-/* harmony import */ var _components_ErrorBoundary__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/ErrorBoundary */ "./src/components/ErrorBoundary.jsx");
-/* harmony import */ var _components_ErrorBoundary__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_components_ErrorBoundary__WEBPACK_IMPORTED_MODULE_4__);
 
 
 
-
-
+ //import {ErrorBoundary} from '../components/ErrorBoundary';
 
 var Billeteras = function Billeteras() {
   return (
@@ -989,9 +910,9 @@ var Billeteras = function Billeteras() {
       className: "billetera-section"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
       className: "billetera"
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_BilleterasList__WEBPACK_IMPORTED_MODULE_2__.BilleterasList, null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_BilleterasList__WEBPACK_IMPORTED_MODULE_2__.default, null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
       className: "page-section"
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_PageSection__WEBPACK_IMPORTED_MODULE_3__.PageSection, null))) //</ErrorBoundary>
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_PageSection__WEBPACK_IMPORTED_MODULE_3__.default, null))) //</ErrorBoundary>
 
   );
 };

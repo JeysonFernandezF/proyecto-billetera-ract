@@ -3,9 +3,11 @@ import React from 'react'
 import "../assets/styles/components/TransferCard.scss";
 
 import TrashSvg from "../assets/static/components/TrashSvg";
-
+import propTypes from "prop-types";
 
 const TransferCard = (props) => {
+
+    const { data } = props;
 
     const formatterPeso = new Intl.NumberFormat('es-CO', {
         style: 'currency',
@@ -20,9 +22,9 @@ const TransferCard = (props) => {
 
     return (
         <div className="card-transferencia">
-            <div className={`tipo ${props.data.monto >= 0 ? 'verde-borde' : 'rojo-borde'}`}>
+            <div className={`tipo ${data.monto >= 0 ? 'verde-borde' : 'rojo-borde'}`}>
                 {
-                    props.data.monto > 0 ?
+                    data.monto > 0 ?
                     (
                         <div className="texto">
                             +
@@ -36,16 +38,16 @@ const TransferCard = (props) => {
                     )
                 }
             </div>
-            <div className="contenido" onClick={() => props.handleSetActivo(props.id,props.data.nombre,props.data.monto) }>
+            <div className="contenido" onClick={() => props.handleSetActivo(props.id,data.nombre,data.monto) }>
                 <div className="datos">
-                    <p className="nombre">{truncate(props.data.nombre, 30)}</p>
-                    <p className={`monto ${props.data.monto >= 0 ? 'verde-texto' : 'rojo-texto'} `}>{formatterPeso.format(props.data.monto)}</p>
-                    <p className="fecha">FECHA: {props.data.fecha}</p>
+                    <p className="nombre">{truncate(data.nombre, 30)}</p>
+                    <p className={`monto ${data.monto >= 0 ? 'verde-texto' : 'rojo-texto'} `}>{formatterPeso.format(data.monto)}</p>
+                    <p className="fecha">FECHA: {data.fecha}</p>
                 </div>
             </div>
             <div className="acciones">
                     
-                    <div className="borrar" onClick={() => props.deleteTransferencia(props.id,props.data.monto, )}>
+                    <div className="borrar" onClick={() => deleteTransferencia(props.id,data.monto, )}>
                     
                     <TrashSvg />
                     </div>
@@ -53,5 +55,9 @@ const TransferCard = (props) => {
         </div>
     )
 }
+
+TransferCard.propTypes = {
+    data: propTypes.object,
+};
 
 export default TransferCard
