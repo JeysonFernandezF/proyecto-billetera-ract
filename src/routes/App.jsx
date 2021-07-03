@@ -22,7 +22,10 @@ const App = () =>  (
             <Route exact path='/' component={Billeteras}/>
           </Suspense>
           
-          <Route component={NotFound} />
+          {/*
+          
+            Me surge el un error y aparece como si fuera una api
+          <Route component={NotFound} />*/}
         </Switch>
       </Layout>
     </BrowserRouter>
