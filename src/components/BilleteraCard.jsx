@@ -35,7 +35,6 @@ const BilleteraCard = (props) => {
                 <div className="datos">
                     <p className="nombre">{truncate(props.data.nombre,25)}</p>
                     <p className="monto">{formatterPeso.format(props.data.monto)}</p>
-                    <p className="fecha">FECHA: {props.data.fecha}</p>
                 </div>
             </div>
             <div className="acciones">

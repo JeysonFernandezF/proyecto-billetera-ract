@@ -42,12 +42,11 @@ const TransferCard = (props) => {
                 <div className="datos">
                     <p className="nombre">{truncate(data.nombre, 30)}</p>
                     <p className={`monto ${data.monto >= 0 ? 'verde-texto' : 'rojo-texto'} `}>{formatterPeso.format(data.monto)}</p>
-                    <p className="fecha">FECHA: {data.fecha}</p>
                 </div>
             </div>
             <div className="acciones">
                     
-                    <div className="borrar" onClick={() => deleteTransferencia(props.id,data.monto, )}>
+                    <div className="borrar" onClick={() => props.deleteTransferencia(props.id,data.monto, )}>
                     
                     <TrashSvg />
                     </div>
