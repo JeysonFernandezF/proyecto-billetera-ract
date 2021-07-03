@@ -1,70 +1,50 @@
-# Getting Started with Create React App
+# Proyecto Billetera React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+El objetivo es tener una organización del dinero entrante a las cuentas o billeteras
 
-## Available Scripts
+Es una página con dos secciones, la parte gris es donde se mostraran las billeteras y la parte 
+blanca es donde apareceran los formularios y las transferencias he información de las mismas
 
-In the project directory, you can run:
+## Agregar Billeteras
 
-### `npm start`
+En la parte superior izquierda a la derecha de "Mis Billeteras" hay un botón +, que al hacer click aparecera
+una nueva sección la cual tendra un formulario en la cual se tiene que ingresar un nombre y un monto inicial para
+poder crear una billetera
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Sección Billeteras
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Las card de las billeteras tiene su nombre, monto y acciones (favorito y borrado)
 
-### `npm test`
+`Favoritas`
+En la parte favortia estaran todas las billeteras que son favoritas
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+para que una billetera sea favorita se tiene que hacer click en la estrella
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+`Billeteras`
+En la parte billeteras estan todas las billeteras que no son favoritas
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+**Las billeteras se pueden eliminar y junto a eso se eliminaran todas las transferencias**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Sección Transferencias
 
-### `npm run eject`
+Al hacer click en una billetera, esta tendra un color amarillento que indicara que es la billetera activa, en la parte derecha se mostrara informacion de la billetera, formulario de creacion de transferencias y una tabla donde estaran todas
+las transferencias realizadas.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Dependiendo del monto ingresado es el cambio del balance actual y al agregar una transferencia aparecera una card con la 
+información, dependiendo del monto esta aparecera verde o roja.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Las transferencias se pueden eliminar y el monto sera restado o sumado al balance actual y al eliminar todas, la billetera
+volvera a tu estado original
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Tambien tiene un boton editar que al apretar se cambiara a un formulario donde se puede editar la billetera
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Api y base de datos
 
-## Learn More
+Se utilizo react redux para la conexión a una api personalizada
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+**https://github.com/JeysonFernandezF/proyecto-billetera-backend**
+Porfavor colocar en el puerto 5000, ya que la app de react apunta a esa dirección, el sql esta en el repositorio en la carpeta database "billetera.sql"
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
